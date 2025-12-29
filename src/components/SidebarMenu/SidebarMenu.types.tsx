@@ -1,18 +1,18 @@
 export interface MenuItem {
     id: string;
     label: string;
-    icon: React.ReactNode;
-    href: string;
-    onClick: () => void;
-    children: MenuItem[];   
+    icon?: React.ReactNode;
+    href?: string;
+    onClick?: () => void;
+    children?: MenuItem[];   
 };
 
 export interface SidebarMenuProps {
     isOpen: boolean;
-    onClose: () => void;
-    items: MenuItem[];
-    title: string;
-    width: number;
+    onClose?: () => void;
+    items?: MenuItem[];
+    title?: string;
+    width?: number;
 };
 
 export interface MenuItemComponentProps {
