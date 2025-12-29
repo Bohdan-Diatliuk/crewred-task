@@ -1,0 +1,127 @@
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.inputWrapper.fullWidth {
+  width: 100%;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 2px;
+}
+
+.inputContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.inputContainer.outlined {
+  border: 2px solid #d1d5db;
+  background-color: #ffffff;
+}
+
+.inputContainer.outlined:focus-within {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.inputContainer.outlined.error {
+  border-color: #ef4444;
+}
+
+.inputContainer.outlined.error:focus-within {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.inputContainer.filled {
+  border: none;
+  background-color: #f3f4f6;
+}
+
+.inputContainer.filled:focus-within {
+  background-color: #e5e7eb;
+}
+
+.inputContainer.filled.error {
+  background-color: #fee2e2;
+}
+
+.inputContainer.small {
+  height: 36px;
+  font-size: 14px;
+}
+
+.inputContainer.medium {
+  height: 42px;
+  font-size: 16px;
+}
+
+.inputContainer.large {
+  height: 48px;
+  font-size: 18px;
+}
+
+.input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0 12px;
+  font-family: inherit;
+  font-size: inherit;
+  color: #1f2937;
+  width: 100%;
+}
+
+.input::placeholder {
+  color: #9ca3af;
+}
+
+.input:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding-right: 8px;
+}
+
+.iconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #6b7280;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.iconButton:hover {
+  color: #374151;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.iconButton:active {
+  transform: scale(0.95);
+}
+
+.errorText {
+  font-size: 13px;
+  color: #ef4444;
+  margin-top: 2px;
+}

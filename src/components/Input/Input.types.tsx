@@ -1,17 +1,11 @@
-export interface InputProps {
+import React from 'react';
+
+export interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> {
   label?: string;
   error?: string;
   clearable?: boolean;
-  className?: string;
-  placeholder: string;
-  defaultValue?: string;
   onClear?: () => void;
   fullWidth?: boolean;
   variant?: 'outlined' | 'filled';
   inputSize?: 'small' | 'medium' | 'large';
-  type?: string;
-  value?: string;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  min?: number;
-  max?: number;
 }

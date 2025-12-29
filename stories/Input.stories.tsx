@@ -146,23 +146,24 @@ export const Disabled: Story = {
     label: 'Disabled Input',
     placeholder: 'Cannot edit this',
     defaultValue: 'Disabled text',
+    disabled: true,
   },
 };
 
 export const Controlled: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = useState('');
     
     return (
       <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
         <Input
-                label="Controlled Input"
-                placeholder="Type something..."
-                value={value}
-                onChange={(e) => setValue(e.target.value)}
-                clearable
-                onClear={() => setValue('')} className={''} min={0} max={0}        />
+          label="Controlled Input"
+          placeholder="Type something..."
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+          clearable
+          onClear={() => setValue('')}
+        />
         <div style={{ fontSize: '14px', color: '#666' }}>
           Current value: <strong>{value || '(empty)'}</strong>
         </div>
@@ -173,7 +174,6 @@ export const Controlled: Story = {
 
 export const AllFeatures: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [text, setText] = useState('john.doe@example.com');
     const [password, setPassword] = useState('mySecretPass123');
     const [number, setNumber] = useState('25');
@@ -181,38 +181,42 @@ export const AllFeatures: Story = {
     return (
       <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', width: '350px' }}>
         <Input
-                label="Email"
-                type="email"
-                value={text}
-                onChange={(e) => setText(e.target.value)}
-                clearable
-                onClear={() => setText('')}
-                placeholder="Enter email" className={''}      />
+          label="Email"
+          type="email"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+          clearable
+          onClear={() => setText('')}
+          placeholder="Enter email"
+        />
         
         <Input
-                label="Password"
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                clearable
-                onClear={() => setPassword('')}
-                placeholder="Enter password" className={''}        />
+          label="Password"
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          clearable
+          onClear={() => setPassword('')}
+          placeholder="Enter password"
+        />
         
         <Input
-                label="Age"
-                type="number"
-                value={number}
-                onChange={(e) => setNumber(e.target.value)}
-                placeholder="Enter age"
-                min={0}
-                max={120}       />
+          label="Age"
+          type="number"
+          value={number}
+          onChange={(e) => setNumber(e.target.value)}
+          placeholder="Enter age"
+          min={0}
+          max={120}
+        />
 
         <Input
-                label="Phone (Filled Variant)"
-                type="tel"
-                variant="filled"
-                placeholder="+1 (555) 000-0000"
-                clearable        />
+          label="Phone (Filled Variant)"
+          type="tel"
+          variant="filled"
+          placeholder="+1 (555) 000-0000"
+          clearable
+        />
       </div>
     );
   },
