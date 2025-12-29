@@ -287,4 +287,4 @@ interface MenuItem {
 
 ## 👤 Author
 
-Bohdan Diatliuk - [GitHub Profile](https://github.com/yourusername)
+Bohdan Diatliuk - [GitHub Profile](https://github.com/Bohdan-Diatliuk)
